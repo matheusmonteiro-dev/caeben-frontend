@@ -1,0 +1,84 @@
+.formulario-login{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    flex: 1;
+    padding: 5em;
+   
+}
+h2{
+    margin-top: 20%;
+    margin-left: 19.5%;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border: 1px solid;
+    border-radius: 4px;
+    gap: 24px;
+    width: 453px;
+    height: 600px;
+    
+}
+span{
+    margin-left: 65%;
+    color: blue;
+}
+input{
+    width: 420px;
+    height: 50px;
+    border-radius: 3px;
+    border: 1px solid;
+}
+div{
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-left: 2.5%;
+    margin-bottom: 20%;
+}
+button{
+    width: 427.5px;
+    height: 50px;
+}
+.mensagem-erro{
+    margin-left: 2%;
+}
+@media (max-width: 600px) {
+    .formulario-login {
+      padding: 2em 1em;
+    }
+  
+    h2 {
+      margin-top: 10%;
+      margin-left: 0;
+      text-align: center;
+    }
+  
+    form {
+      width: 100%;
+      max-width: 320px;
+      height: auto;
+    }
+  
+    input {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    button {
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    div {
+      margin-left: 0;
+      margin-bottom: 10%;
+    }
+  
+    span {
+      margin-left: auto;
+      text-align: right;
+    }
+  }

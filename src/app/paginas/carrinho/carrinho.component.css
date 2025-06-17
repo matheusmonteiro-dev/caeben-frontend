@@ -1,0 +1,393 @@
+.container-carrinho {
+    display: flex;
+    flex-direction: row;
+    flex: 1;
+    padding-top: 2%;
+}
+
+section {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+    padding-left: 2%;
+    width: 500px;
+}
+
+.quantidade {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+.especificacao {
+    display: flex;
+    flex-direction: row;
+}
+
+.numero-tenis {
+   width: 25px;
+   margin-top: 11%;
+   height: 10px;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+}
+
+.container-pagamentos {
+    cursor: auto;
+    box-sizing: border-box;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px #e8e8e8;
+    margin-top: 5%;
+    margin-left: 600px;
+    height: 740px;
+    margin-bottom: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20%;
+}
+
+h2 {
+    font-family: 'MontSerrat';
+    font-size: 20px;
+    margin-left: 2.2%;
+}
+
+h3 {
+    font-family: 'MontSerrat';
+    font-size: 20px;
+    white-space: nowrap;
+    margin-left: 15%;
+}
+
+h4 {
+    font-family: 'MontSerrat';
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+h5 {
+    font-family: 'MontSerrat';
+    font-size: 20px;
+    white-space: nowrap;
+}
+
+.botoes {
+    display: flex;
+    flex-direction: row;
+    border: none;
+    gap: 10px;
+    margin-left: 15%;
+}
+.botoes-pagar-mobile {
+    display: none;
+}
+.botao-pagar {
+    justify-content: center;
+    height: 35px;
+    width: 250px;
+    font-size: 20px;
+    font-family: 'MontSerrat';
+    cursor: pointer;
+    border:1px solid #e8e8e8;
+    background-color: black;
+    color: white;
+}
+
+.quantidade-tenis {
+    display: flex;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-top: 9px;
+    cursor: pointer;
+    border:1px;
+}
+
+form {
+    display: flex;
+    flex-direction: row;
+    gap: 16px;
+}
+
+input {
+    cursor: pointer;
+}
+
+.preco {
+    margin-left: 15%;
+}
+
+.botao-menos {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.botao-mais {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.remover-item {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    box-shadow: 0px 8px 16px 0px #e8e8e8;
+    box-sizing: border-box;
+    margin-left: 35%;
+    width: 250px;
+    height: 125px;
+    gap: 8px;
+}
+
+.mensagem-advertencia {
+    margin-left: 12%;
+}
+
+.botao-remover {
+    background-color: black;
+    color: white;
+    margin-left: 10%;
+    width: 200px;
+    cursor: pointer;
+}
+
+.botao-cancelar {
+    background-color: white;
+    border: 1px solid #e8e8e8;
+    margin-left: 10%;
+    width: 200px;
+    cursor: pointer;
+}
+
+h1 {
+    position: absolute;
+}
+
+.mensagem-carrinho-vazio {
+    display: flex;
+    align-items: center;
+    margin-left: 160%;
+    font-family: 'MontSerrat';
+    min-height: 100vh;
+}
+
+.mensagem-advertencia {
+    color: red;
+}
+.container-mobile{
+    display: none;
+}
+.tamanho-mobile{
+    color: transparent;
+    background-color: transparent;
+}
+.mensagem-carrinho-vazio-mobile{
+    display: none;
+}
+/* Responsividade para Mobile */
+@media (max-width: 600px) {
+    .mensagem-carrinho-vazio-mobile{
+        display: flex;
+        align-items: center;
+        margin-left: 11.5%;
+        margin-top: 40%;
+    }
+    h1{
+        font-size:24px;
+    }
+    img {
+        width: 50px;
+        height: 50px;
+    }
+    .tamanho-mobile{
+        display: block;
+        color: black;
+    }
+    .container-carrinho {
+        display: flex;
+        flex-direction: column;
+        padding-top: 2%;
+    }
+    
+    section {
+        display: flex;
+        flex-direction: row;
+        gap: 16px;
+        padding-left: 2%;
+        width: 500px;
+    }
+    
+    .quantidade {
+        display: flex;
+        flex-direction: row;
+        gap: 4px;
+    }
+    
+    .especificacao {
+        display: flex;
+        flex-direction: row;
+    }
+    
+    .numero-tenis {
+       width: 25px;
+       margin-top: 11%;
+       height: 10px;
+    }
+    
+    .detalhes {
+        display: flex;
+        flex-direction: column;
+        margin-right: 0px;
+    }
+    .botoes-pagar-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+      
+       
+    }
+    .botao-pagar-mobile {
+        width: 250px;
+        height: 30px;
+        background-color: black;
+        color: white; /* para o texto aparecer */
+        
+    }
+    .container-mobile{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        margin-left: 12%; 
+    } 
+
+    form{
+        display: flex;
+        flex-direction: row;
+    }
+    /* .tipo-pagamento{
+        
+    } */
+     .pagamento-mobile{
+        display: flex;
+        flex-direction: column;
+        justify-content: right;
+     }
+    h6{
+        display: block;
+        font-size: 14px;
+        font-family: 'Montserrat';
+    }
+    .mensagem-advertencia-mobile {
+        display: block;
+        color: red;
+    }
+    .container-pagamentos {
+      display: none;
+    }
+    .mensagem-carrinho-vazio{
+        display: none;
+
+    }
+    
+    h2 {
+        display: none;
+    }
+    
+    h3 {
+        display: none;
+    }
+    
+    h4 {
+        display: none;
+    }
+    
+    h5 {
+        display: none;
+    }
+    
+    .botoes {
+        display: none;
+    }
+    
+    .botao-pagar {
+        display: none;
+    }
+    
+    .quantidade-tenis {
+        display: none;
+    }
+    
+    .preco {
+        display: none;
+    }
+    
+    .botao-menos {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-color: transparent;
+        border: transparent;
+    }
+    
+    .botao-mais {
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        background-color: transparent;
+        border: transparent;
+    }
+    .simbolo{
+        width: 18px;
+    }
+    .remover-item {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        background-color: rgb(255, 255, 255);
+        box-shadow: 0px 8px 16px 0px #e8e8e8;
+        box-sizing: border-box;
+        margin-left: 35%;
+        width: 250px;
+        height: 125px;
+        gap: 8px;
+    }
+    
+    .mensagem-advertencia {
+        margin-left: 12%;
+    }
+    
+    .botao-remover {
+        background-color: black;
+        color: white;
+        margin-left: 10%;
+        width: 200px;
+        cursor: pointer;
+    }
+    
+    .botao-cancelar {
+        background-color: white;
+        border: 1px solid #e8e8e8;
+        margin-left: 10%;
+        width: 200px;
+        cursor: pointer;
+    }
+    
+    h1 {
+        position: absolute;
+    }
+    
+    
+    .mensagem-advertencia {
+        color: red;
+    }
+    
+
+    
+}

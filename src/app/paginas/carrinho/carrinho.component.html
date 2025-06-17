@@ -1,0 +1,102 @@
+    <section class="container-carrinho">
+        <div class="mensagem-carrinho-vazio" *ngIf="produtos.length==0" [@fadeInOut]>
+            <h1>
+                Carrinho vázio!
+            </h1>
+        </div>
+    <section class="detalhes">
+        <section *ngFor="let produto of produtos; let i= index">
+            @if(listaCount[i]===0){
+               <div class="remover-item">
+                    <p class="mensagem-advertencia">Deseja remover este item?</p>
+                    <button (click)="removerItem(produtos[i])" class="botao-remover">remover</button>
+                    <button (click)="cancelar(i)"  class="botao-cancelar">cancelar</button>
+               </div>
+            }
+            <div class="especificacao">
+                <button (click)="diminuirContador(i)" class="botao-menos"><img class="simbolo" src="assets/minus.svg" alt="" width="25px"></button>
+                <label class="quantidade-tenis">{{listaCount[i]}}</label>
+                <button (click)="adicionarContador(i)" class="botao-mais"><img class="simbolo" src="assets/plus.svg" alt="" width="25px"></button>
+            </div>
+            <div>
+                <img src="{{produtos[i].imagem}}" alt="" width="150">
+            </div>
+            <div>
+                <div class="exclusao-item">
+                    <strong><p>{{produtos[i].nome}}</p></strong>
+                </div>
+                <strong><p>{{produtos[i].cor}}</p></strong>
+                    <p>{{produtos[i].tamanho}}</p>
+                <p>{{produtos[i].preco  | currency:'BRL'}}</p>
+                <p class="tamanho-mobile">Quantidade: {{listaCount[i]}}</p>
+            </div>
+        </section>
+        
+        <div class="container-mobile">
+            <div class="mensagem-carrinho-vazio-mobile" *ngIf="produtos.length==0" [@fadeInOut]>
+                <h1>
+                    Carrinho vázio!
+                </h1>
+            </div>
+            <div class="pagamento-mobile"  *ngIf="produtos.length!=0" [@fadeInOut]>
+                <form>
+                    <label>
+                    <input type="radio" name="pagamento" value="à vista/PIX" [(ngModel)]="formaDePagamento"> 
+                    <p>à vista ou  PIX</p>
+                    <p>{{valorMaximo | currency:'BRL'}}</p>
+                    </label>
+                    <label>
+                    <input type="radio" name="pagamento" value="debito" [(ngModel)]="formaDePagamento"> 
+                    <p>débito</p>
+                    <p> {{(valorMaximo*10/100)+valorMaximo  | currency:'BRL'}}</p>
+                    </label>
+                    <label>
+                    <input type="radio" name="pagamento" value="credito" [(ngModel)]="formaDePagamento">
+                    <p>crédito</p>
+                    <p>{{(valorMaximo*15/100)+valorMaximo  | currency:'BRL'}}</p>
+                    </label>
+                </form>
+                @if (this.formaDePagamento=='' && enviarAoFabricante) {
+                    <p class="mensagem-advertencia-mobile">Selecione a forma de pagamento.</p>
+              }
+            <div class="botoes-pagar-mobile">
+                <button (click)="enviarPagamento()" class="botao-pagar-mobile">Pagar</button>
+            </div>
+        </div>  
+        </div>
+      
+    </section>
+    <div class="container-pagamentos" *ngIf="produtos.length>=1" [@fadeInOut]>
+        <h4>Forma de pagamento</h4> 
+        <div class="preco">   
+            <form>
+                <label>
+                  <input type="radio" name="pagamento" value="à vista/PIX" [(ngModel)]="formaDePagamento"> 
+                  <p>à vista ou  PIX</p>
+                </label>
+                <label>
+                  <input type="radio" name="pagamento" value="debito" [(ngModel)]="formaDePagamento"> 
+                  <p>débito</p>
+                </label>
+                <label>
+                  <input type="radio" name="pagamento" value="credito" [(ngModel)]="formaDePagamento">
+                  <p>crédito</p>
+                </label>
+              </form>
+            <h3>{{valorMaximo | currency:'BRL'}}</h3>
+            <h5>à vista ou no PIX</h5>
+            <h3>{{(valorMaximo*10/100)+valorMaximo  | currency:'BRL'}}</h3>
+            <h5>cartão de débito</h5>
+            <h3>{{(valorMaximo*15/100)+valorMaximo  | currency:'BRL'}}</h3>
+            <h5>cartão de crédito</h5>
+        </div>
+        @if (this.formaDePagamento=='' && enviarAoFabricante) {
+            <p class="mensagem-advertencia">Selecione a forma de pagamento.</p>
+      }
+        <div class="botoes">
+            <button (click)="enviarPagamento()" class="botao-pagar">Pagar</button>
+        </div>
+        <!-- <p>Forma de pagamento selecionada: {{ formaDePagamento }}</p> -->
+    </div>
+   
+</section>

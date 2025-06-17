@@ -1,0 +1,157 @@
+ section{
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    padding-left: 2%;
+    margin: 5%;
+    gap: 500px;
+ }  
+   
+   div{ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+   
+   }
+   .container{
+      cursor:auto;
+      box-sizing: border-box;
+      background-color: rgb(255, 255, 255);
+      box-shadow: 0px 8px 16px 0px #e8e8e8;
+      width: 500px;
+      max-width: 80%;
+      margin: 0px;
+      padding: 0px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding-bottom: 2%;
+      
+   }
+   .botoes{
+      display: flex;
+      flex-direction: row;
+      border: none;
+      gap: 10px;
+   }
+   button{
+      width: 170px;
+      height: 30px;
+      cursor: pointer;
+   }
+   .botao-pagar{
+      background-color: black;
+      color: white;
+   }
+   .botao-adicionar{
+      background-color: white;
+      border: 1px solid #e8e8e8;
+   }
+   .tamanhos{
+      display: flex;
+      flex-direction: row;
+      margin-top: 12%;
+      gap:16px;
+      border:none;
+      }
+ .tamanho-tenis{
+   width: 30px;
+   height: 30px;
+   padding: 0px 8px;
+   margin: 0px 9px 9px 0px;
+   font-size: 26px;
+   cursor: pointer;
+   border:1px solid #e8e8e8;
+   background-color: none;
+   display: inline-block;  /* Garantir que o label seja um bloco inline */
+  text-align: center;     /* Ajusta o alinhamento do texto dentro do label */
+}
+.tamanho-tenis:hover{
+   background-color: yellow;
+}
+.container-tamanho-preco{
+   border: none;
+}
+.container-tamanho-preco h1{
+  font-family: 'Montserrat';
+  font-size: 24px;
+}
+.container-tamanho-preco h3{
+  font-family: 'Montserrat';
+  font-size: 19px;
+  
+}
+.container-tamanho-preco h2{
+  font-family: 'Montserrat';
+  font-size: 22px;
+  
+}
+.preco{
+   border: none;
+}
+form{
+   display: flex;
+   flex-direction: row;
+   gap: 16px;
+}
+.mensagem-advertencia{
+   color: red;
+}
+@media (max-width: 600px) {
+   section {
+       flex-direction: column;
+       align-items: center;
+       gap: 20px;
+       padding-bottom: 50px; 
+   }
+
+   .container {
+       width: 70%;
+       max-width: 70%;
+       padding: 0 10px;
+   }
+
+   /* Ajustando os botões */
+   .botoes {
+       flex-direction: column;
+       gap: 10px;
+       margin-bottom: 20px;
+   }
+
+   button {
+       width: 70%;
+       height: 40px; /* Aumentando a altura para facilitar o clique */
+   }
+
+   /* Ajustando a área de tamanhos */
+   .tamanhos {
+       flex-wrap: wrap;
+       justify-content: center;
+   }
+
+   .tamanho-tenis {
+       font-size: 20px; /* Reduzindo o tamanho da fonte em dispositivos pequenos */
+       width: 20px;
+       height: 20px;
+       padding-top: 2%;
+   }
+   img{
+      width: 0px;
+       height: 0px;
+   }
+
+   /* Ajustando os tamanhos de fonte nos títulos */
+   .container-tamanho-preco h1 {
+       font-size: 20px;
+   }
+
+   .container-tamanho-preco h3 {
+       font-size: 16px;
+   }
+
+   .container-tamanho-preco h2 {
+       font-size: 18px;
+   }
+}

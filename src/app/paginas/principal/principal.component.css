@@ -1,0 +1,96 @@
+
+section{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding-bottom: 5%;
+}
+.filtro{
+    display: flex;
+    justify-content: right;
+    margin-right: 16px;
+    margin-top: 32px;
+}
+.pesquisa-filtro{
+    width: 180px;
+    padding: 3px 6px;
+    cursor:text;
+    font-size: 16px;
+}
+.itens{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 86px;
+    margin-top: 2%;
+}
+.itens div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #e8e8e8;
+    cursor: pointer;
+}
+.itens-button{
+    border: none;
+    padding: 0px;
+    cursor: pointer;
+}
+p{
+    font-family: 'MontSerrat';
+}
+@media (max-width: 600px) {
+    section {
+        padding: 0 16px;
+      }
+    .itens div{
+      width:350px;
+      height: 1600px;
+    } 
+    .itens{
+      width:350px;
+      height: 1600px;
+      margin-top: 10%;
+      max-width: 100%}
+
+    .itens div img{
+      width:350px;
+      height: 200px;
+    } 
+      .filtro {
+        justify-content: center;
+        margin: 16px 0;
+      }
+    
+      .pesquisa-filtro {
+        width: 60%;
+        max-width: 320px;
+        font-size: 14px;
+        
+      }
+    
+      .itens {
+        flex-direction: column;
+        align-items: center;
+        margin-left: 5%;
+        gap: 24px;
+      }
+    
+      .itens div {
+        width: 100%;
+        max-width: 320px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+      }
+
+      .itens-button img {
+        width: 100%;
+        height: auto;
+      }
+      p {
+        font-size: 14px;
+        text-align: center;
+        padding: 4px;
+      }
+}

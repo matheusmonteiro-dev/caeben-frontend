@@ -1,0 +1,26 @@
+<section class="formulario-login">
+    
+    <form [formGroup]="usuarioForm" *ngIf="exibirFormulario" [@fadeInOut]>
+        <h2>Cadastre-se ou faça login</h2>
+        <div>
+            <input type="email" placeholder="email" formControlName="email">
+            <input type="password" placeholder="senha" formControlName="senha">
+            <span style="text-decoration: underline ;" (click)="esqueciMinhaSenha()">esqueci minha senha</span>
+            <p class="mensagem-erro" *ngIf="usuarioForm.get('email')?.valid && loginOuSenha==false || usuarioForm.get('senha')?.valid  && loginOuSenha==false">email ou senha incorretos</p>
+        </div>
+       
+        <div class="botoes">
+            <button (click)="login()">Entrar</button>
+            <button (click)="exibirFormulario=false">Cadastrar</button>
+        </div>   
+    </form>
+    <form [formGroup]="usuarioForm" *ngIf="!exibirFormulario" [@fadeInOut]>
+        <h2>Cadastre-se</h2>
+        <div>
+            <input type="email" placeholder="email" formControlName="email">
+        </div>
+        <div class="botoes">
+            <button (click)="enviarEmail()">Cadastrar</button>
+        </div>   
+    </form>
+</section>

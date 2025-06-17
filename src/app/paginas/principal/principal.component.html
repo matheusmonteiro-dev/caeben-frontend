@@ -1,0 +1,36 @@
+<section>
+    <!-- <div class="filtro">
+        <input placeholder="Pesquisar" type="text"  class="pesquisa-filtro">
+    </div> -->
+    <div class="itens">
+        <div routerLink="/produto-selecionado" *ngFor="let item of itens; let i = index" 
+        [@scaleAnimation]="animationStates[i]"
+        (mouseover)="setAnimationState(i, 'hover')"
+        (mouseleave)="setAnimationState(i, 'default')"
+        (click)="enviarTenisParaProdutosSelecionados(gerarCaminhoImagem(i),produtos[i])">
+            <button class="itens-button">
+                <img src="{{gerarCaminhoImagem(i)}}" alt="tenis" width="400" height="400">
+            </button>
+            <p>{{produtos[i].nome}}</p>
+            <p> <strong>{{produtos[i].cor}}</strong></p>
+            <p>R${{produtos[i].preco}},00</p>
+        </div>
+       
+    </div> 
+
+    <div class="itens">
+        <div routerLink='/produto-selecionado' *ngFor="let item of itens; let i = index" 
+        [@scaleAnimation]="animationStates[i+4]"
+        (mouseover)="setAnimationState(i+4, 'hover')"
+        (mouseleave)="setAnimationState(i+4, 'default')"
+        (click)="enviarTenisParaProdutosSelecionados(gerarCaminhoImagem(i+4),produtos[i+4])" >
+            <button  class="itens-button">
+                <img src="{{gerarCaminhoImagem(i+4)}}" alt="tenis" width="400" height="400">
+            </button>
+            <p>{{produtos[i+4].nome}}</p>
+            <p> <strong>{{produtos[i+4].cor}}</strong></p>
+            <p>R${{produtos[i+4].preco}},00</p>
+        </div >
+       
+    </div>
+</section>

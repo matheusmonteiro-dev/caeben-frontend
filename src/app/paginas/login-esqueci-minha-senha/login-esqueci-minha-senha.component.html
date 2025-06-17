@@ -1,0 +1,12 @@
+<section class="formulario-login">
+    <form [formGroup]="loginForm">
+        <h2>digite seu email</h2>
+        <div>
+            <input type="email" placeholder="email" formControlName="email">
+        </div>
+        <div class="botoes">
+            <button (click)="verificarEmail()">recuperar</button>
+        </div>   
+    </form>
+
+</section>

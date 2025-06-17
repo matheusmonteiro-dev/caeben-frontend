@@ -1,0 +1,102 @@
+.cabecalho{
+    display: flex;
+    background-color: black;
+    justify-content: space-between; /* Espaço entre os elementos */
+    align-items: center;
+    width: 100%;
+    padding-top: 2em;
+    padding-bottom: 2em;
+    position: relative;
+}
+
+h2{
+    font-family: "Roboto Serif";
+    color: white;
+    font-size: 36px;
+    flex: 1;
+    text-align: center;
+    cursor: pointer;
+}
+div{
+    margin-left: auto;
+    padding-right: 1%;
+    cursor: pointer;
+}
+img{
+    color: white;
+    background-color: white;
+    padding: 0.4em;
+    margin-right: 6px;
+    width: 30px;
+    border-radius: 50%;
+}
+.botao-logout{
+    background-color: black;
+    color: white;
+    cursor: pointer;
+    font-size: 22px;
+    margin-left: 1%;
+   
+}
+.botao-logout:hover{
+    color:orange;
+}
+@media (max-width: 600px) {
+    .cabecalho {
+        flex-direction: column; /* Empilhar os itens no mobile */
+        padding-top: 1em;
+        padding-bottom: 1em;
+        width: 100%;
+   
+    }
+    a{
+        position: absolute;
+        margin-right: 79%;
+        margin-top: 20px;
+    }
+
+    h2 {
+        font-size: 24px; /* Reduzir o tamanho do título no mobile */
+        flex: 0; /* Para que o título não ocupe todo o espaço disponível */
+    }
+
+    div {
+        display: block; /* Ocultar ícone de imagem na versão mobile */
+        margin-left: auto;
+        padding-right: 1%;
+        cursor: pointer;
+    }
+    img{
+        color: white;
+        background-color: white;
+        padding: 0.4em;
+        margin-right: 11px;
+        width: 22.5px;
+        border-radius: 50%;
+        display: block;
+        position: absolute;
+        top: 32px; 
+        right: 10px;
+    }
+
+    /* Menu Hamburguer */
+    .menu-toggle {
+        display: block;
+        font-size: 30px;
+        color: white;
+        cursor: pointer;
+    }
+
+    /* Mostrar o menu quando ativo */
+    .navbar {
+        display: none; /* Ocultar o menu por padrão */
+        flex-direction: column;
+        gap: 10px;
+        text-align: center;
+    }
+
+    .navbar.active {
+        display: flex; /* Mostrar o menu quando a classe "active" for adicionada */
+    }
+
+}

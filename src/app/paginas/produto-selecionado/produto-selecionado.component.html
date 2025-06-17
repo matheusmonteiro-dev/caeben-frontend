@@ -1,0 +1,47 @@
+<section>
+    <div>
+        <img src="{{imagemDoProduto.imagem}}" alt="imagem-tenis" width="500" height="600">    
+    </div>
+    <div class="container">
+       <div class="container-tamanho-preco">
+        <h1>{{produto.nome}}</h1>
+        <div class="tamanhos"  >
+            <label class="tamanho-tenis"  [ngStyle]="{'background-color': coresDeFundo[i]}"  (click)="getLabelValue($event, i)" *ngFor="let produtos of produto.tamanhos; let i = index">{{produtos}}</label >
+        </div>
+        @if (this.selecionarTamanho==false && enviarAoFabricante || enviarAoCarrinho) {
+            <p class="mensagem-advertencia">Selecione o tamanho do tênis.</p>
+        }
+        <div class="preco">
+            <form >
+                <label class="forma-pagamento">
+                  <input type="radio" name="pagamento" value="à vista/PIX" [(ngModel)]="formaDePagamento"> 
+                  <p>à vista ou  PIX</p>
+                </label>
+                <label class="forma-pagamento">
+                  <input type="radio" name="pagamento" value="debito" [(ngModel)]="formaDePagamento"> 
+                  <p>débito</p>
+                </label>
+                <label class="forma-pagamento">
+                  <input type="radio" name="pagamento" value="credito" [(ngModel)]="formaDePagamento">
+                  <p>crédito</p>
+                </label>
+              </form>
+              @if (this.formaDePagamento=='' && enviarAoFabricante) {
+                    <p class="mensagem-advertencia">Selecione a forma de pagamento.</p>
+              }
+            <h3>{{produto.preco | currency:'BRL'}}</h3>
+            <h3>à vista ou no PIX</h3>
+            <h3>{{(produto.preco*10/100)+produto.preco  | currency:'BRL'}}</h3>
+            <h3>cartão de débito</h3>
+            <h3>{{(produto.preco*15/100)+produto.preco  | currency:'BRL'}}</h3>
+            <h3>cartão de crédito</h3>
+        </div>
+        
+       </div> 
+        <div class="botoes">
+            <button (click)='pagar()' class="botao-pagar">Pagar</button>
+            <button (click)="adicionarCarrinho()" class="botao-adicionar" >Adicionar ao carrinho</button> 
+        </div>
+        
+    </div>
+</section>
